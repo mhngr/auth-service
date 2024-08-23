@@ -1,5 +1,9 @@
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
-from django.db import models
+from django.contrib.auth.models import  BaseUserManager
+
+"""
+The UserManager class customizes user creation, requiring a mobile number.
+It includes methods to create users . This supports mobile-based authentication.
+"""
 
 
 class UserManager(BaseUserManager):
@@ -11,7 +15,4 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, mobile, password=None, **extra_fields):
-        extra_fields.setdefault('is_staff', True)
-        extra_fields.setdefault('is_superuser', True)
-        return self.create_user(mobile, password, **extra_fields)
+

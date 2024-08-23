@@ -2,6 +2,12 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Permis
 from django.db import models
 from .user_manager import UserManager
 
+"""
+The User model is a custom user class for authentication, using mobile as the unique identifier. It includes fields for 
+first name, last name, email, active status, and staff status. It also manages group and permission relationships, avoiding
+clashes with default Django user settings.
+"""
+
 
 class User(AbstractBaseUser, PermissionsMixin):
     mobile = models.CharField(max_length=15, unique=True)

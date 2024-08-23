@@ -1,5 +1,9 @@
 from django.db import models
 
+"""
+The LoginAttempt model tracks login and OTP attempts, storing the mobile number, IP address, timestamp, 
+success status, and type (login or otp). This helps implement security measures like blocking after failed attempts.
+"""
 
 class LoginAttempt(models.Model):
     mobile = models.CharField(max_length=15, blank=True)
