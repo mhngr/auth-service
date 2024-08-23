@@ -22,9 +22,9 @@ This API is designed to handle user registration, login, and OTP verification us
   {
       "mobile": "1234567890",
       "password": "securepassword",
-      "first_name": "John",
-      "last_name": "Doe",
-      "email": "john.doe@example.com"
+      "first_name": "Mahnegar",
+      "last_name": "Eskandari",
+      "email": "moon@example.com"
   }
 - **Success Response**:
   - `Code: 201 CREATED`
@@ -156,9 +156,9 @@ A Postman collection has been provided to help test the API endpoints. You can u
 {
     "mobile": "1234567890",
     "password": "securepassword",
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "john.doe@example.com"
+    "first_name": "Mahnegar",
+    "last_name": "Eskandari",
+    "email": "moon@example.com"
 }
 ```
 #### 2. OTP Generation Request
@@ -195,9 +195,9 @@ A Postman collection has been provided to help test the API endpoints. You can u
 }
 ```
 #### 4. User Login Request
-- **Method**: POST
+- **Method**: `POST`
 
-- **URL**: http://localhost:8000/auth/login/
+- **URL**: `http://localhost:8000/auth/login/`
 
 - **Headers**:
 
